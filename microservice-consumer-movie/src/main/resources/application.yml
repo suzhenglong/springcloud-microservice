@@ -1,0 +1,25 @@
+server:
+  port: 8501
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8502/eureka/
+  instance:
+    instance-id: microservice-consumer-movie
+    prefer-ip-address: true     #访问路径可以显示IP地址
+
+spring:
+  application:
+    name: microservice-consumer-movie
+
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
+    build:
+      artifactId: @project.artifactId@
+      version: @project.version@
