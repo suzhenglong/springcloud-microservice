@@ -8,3 +8,14 @@ eureka:
     fetchRegistry: false          #是否从注册中心获取注册信息 默认true
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址（单机）,多个用,分隔
+
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
+    build:
+      artifactId: @project.artifactId@
+      version: @project.version@

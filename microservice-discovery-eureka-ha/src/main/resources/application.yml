@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: microservice-discovery-eureka-ha
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/,http://peer3:8763/eureka/
+
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
+    build:
+      artifactId: @project.artifactId@
+      version: @project.version@
+---
+spring:
+  profiles: peer1
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: peer1
+---
+spring:
+  profiles: peer2
+server:
+  port: 8762
+eureka:
+  instance:
+    hostname: peer2
+---
+spring:
+  profiles: peer3
+server:
+  port: 8763
+eureka:
+  instance:
+    hostname: peer3
+
+# 执行命令
+# java -jar /f/workspace/IDEA_201712/springcloud-microservice/microservice-discovery-eureka-ha/microservice-discovery-eureka-ha.jar --spring.profiles.active=peer
