@@ -42,6 +42,6 @@ info:
       version: @project.version@
 management:
   security:
-    enabled: false
+    enabled: false                 # 显示当前应用的健康状况 true:只显示概要情况 false:展示详情
 
 

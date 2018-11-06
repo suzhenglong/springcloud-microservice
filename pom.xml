@@ -39,6 +39,7 @@
 
     <modules>
         <module>microservice-simple-provider-user</module>
+        <module>microservice-simple-consumer-movie</module>
     </modules>
 
     <build>
