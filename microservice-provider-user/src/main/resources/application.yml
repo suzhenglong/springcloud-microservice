@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:7001/eureka/
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/,http://peer3:8763/eureka/
   instance:
     instance-id: microservice-provider-user
     prefer-ip-address: true     #访问路径可以显示IP地址

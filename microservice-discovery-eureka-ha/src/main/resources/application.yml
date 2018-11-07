@@ -3,6 +3,8 @@ spring:
     name: microservice-discovery-eureka-ha
 eureka:
   client:
+    registerWithEureka: false     #是否向注册中心注册自己。默认true
+    fetchRegistry: true          #是否从注册中心获取注册信息 默认true 此处为集群注册中心需要从其他节点同步数据,故设置为true
     serviceUrl:
       defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/,http://peer3:8763/eureka/
 
