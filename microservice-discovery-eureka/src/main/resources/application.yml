@@ -25,3 +25,4 @@ info:
 # http://localhost:7001/
 # http://localhost:7001/eureka/apps
 # http://localhost:8501/user-instance
+# http://localhost:7001/eureka/apps/MICROSERVICE-PROVIDER-USER-MY-METADATA
