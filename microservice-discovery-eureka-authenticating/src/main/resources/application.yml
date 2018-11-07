@@ -1,0 +1,28 @@
+server:
+  port: 7001
+eureka:
+  instance:
+    hostname: localhost            #eureka服务端的实例名称
+  client:
+    registerWithEureka: false     #是否向注册中心注册自己。默认true
+    fetchRegistry: false          #是否从注册中心获取注册信息 默认true 此处为单节点 不需要同步其他的注册节点的数据,故设置值为false
+    serviceUrl:
+      defaultZone: http://admin:123456@${eureka.instance.hostname}:${server.port}/eureka/ #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址（单机）,多个用,分隔
+
+security:
+  basic:
+    enabled: true                   #开启基于http basic 的认证
+  user:
+    name: admin                     #用户名
+    password: 123456                #密码 若不填写 默认为随机值 启动时打印
+
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
+    build:
+      artifactId: @project.artifactId@
+      version: @project.version@
