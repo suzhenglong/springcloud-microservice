@@ -3,6 +3,8 @@ server:
 
 eureka:
   client:
+    healthcheck:
+      enabled: true             #配置属性在IDEA里面不会自动提示
     serviceUrl:
       defaultZone: http://localhost:7001/eureka/
   instance:
@@ -57,4 +59,10 @@ management:
   security:
     enabled: false                 # 显示当前应用的健康状况 true:只显示概要情况 false:展示详情
 
+#测试 eureka.client.healthcheck.enabled=true 的效果
+#启动 microservice-discovery-eureka
+# http://localhost:7001/
+# http://localhost:8500/health
+# http://localhost:8500/up?up=false
+# 注册中心的服务状态也将变为DOWN
 
