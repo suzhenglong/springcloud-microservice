@@ -45,3 +45,6 @@ eureka:
 
 # 执行命令
 # java -jar /f/workspace/IDEA_201712/springcloud-microservice/microservice-discovery-eureka-ha/microservice-discovery-eureka-ha.jar --spring.profiles.active=peer
+#测试
+# 启动 microservice-provider-user
+# http://peer1:8761/

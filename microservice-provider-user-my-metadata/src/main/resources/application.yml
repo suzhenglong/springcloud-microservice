@@ -1,6 +1,19 @@
 server:
   port: 8500
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: microservice-provider-user-my-metadata
+    prefer-ip-address: true     #访问路径可以显示IP地址
+    metadata-map:
+      my-metadata: 自定义元数据-龍
+
 spring:
+  application:
+    name: microservice-provider-user-my-metadata
   jpa:
     generate-ddl: false                 #是否在启动时初始化schema，默认为false
     show-sql: true                      #是否开启sql的log，默认为: false
@@ -45,6 +58,3 @@ management:
     enabled: false                 # 显示当前应用的健康状况 true:只显示概要情况 false:展示详情
 
 
-#测试
-# http://localhost:8500/1
-# http://localhost:8500/health

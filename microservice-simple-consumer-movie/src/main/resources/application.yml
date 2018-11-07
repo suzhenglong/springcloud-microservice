@@ -11,3 +11,7 @@ info:
     build:
       artifactId: @project.artifactId@
       version: @project.version@
+
+#测试
+#启动  microservice-simple-provider-user
+# http://localhost:8501/user/11

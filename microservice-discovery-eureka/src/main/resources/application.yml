@@ -19,3 +19,9 @@ info:
     build:
       artifactId: @project.artifactId@
       version: @project.version@
+
+#测试
+#启动 microservice-provider-user-my-metadata microservice-consumer-movie-understanding-metadata
+# http://localhost:7001/
+# http://localhost:7001/eureka/apps
+# http://localhost:8501/user-instance

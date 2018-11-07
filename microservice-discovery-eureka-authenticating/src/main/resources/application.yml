@@ -26,3 +26,7 @@ info:
     build:
       artifactId: @project.artifactId@
       version: @project.version@
+
+#测试
+#启动 microservice-consumer-movie
+#测试 http://localhost:7001/ 输入用户名 密码
