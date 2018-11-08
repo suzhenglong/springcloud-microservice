@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author: zhenglongsu@163.com
  * @date: 2018.11.08 10:59
  */
-@FeignClient(name = "MICROSERVICE-PROVIDER-USER",configuration = FeignLogConfiguration.class)
+//@FeignClient(name = "MICROSERVICE-PROVIDER-USER",configuration = FeignLogConfiguration.class)
+@FeignClient(name = "MICROSERVICE-PROVIDER-USER")
 public interface UserFeignClient {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)

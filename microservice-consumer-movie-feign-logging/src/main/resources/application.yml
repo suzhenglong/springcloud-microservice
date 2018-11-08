@@ -13,6 +13,16 @@ spring:
   application:
     name: microservice-consumer-movie-feign-logging
 
+logging:
+  level:
+    #将fegin的日志设置为debug 因为fegin的Logger.Level只对Debug做出响应
+    com.csii.cloud.study.feign.UserFeignClient: DEBUG
+feign:
+  client:
+    config:
+      MICROSERVICE-PROVIDER-USER:
+        loggerLevel: full
+
 
 info:
   app:
@@ -25,13 +35,11 @@ info:
       artifactId: @project.artifactId@
       version: @project.version@
 
-logging:
-  level:
-    #将fegin的日志设置为debug 因为fegin的Logger.Level只对Debug做出响应
-    com.csii.cloud.study.feign.UserFeignClient: DEBUG
+
 
 #
 # microservice-discovery-eureka
 # microservice-provider-user
 # 测试  http://localhost:8508/user/22
+
 #
