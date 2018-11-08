@@ -1,0 +1,30 @@
+server:
+  port: 8508
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: microservice-consumer-movie-feign-manual
+    prefer-ip-address: true     #访问路径可以显示IP地址
+
+spring:
+  application:
+    name: microservice-consumer-movie-feign-manual
+
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
+    build:
+      artifactId: @project.artifactId@
+      version: @project.version@
+
+# microservice-discovery-eureka
+# microservice-provider-user-with-auth
+# 测试  http://localhost:8508/user-user/22
+#
