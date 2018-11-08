@@ -6,12 +6,13 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:7001/eureka/
   instance:
-    instance-id: microservice-consumer-movie-feign-manual
+    instance-id: microservice-consumer-movie-feign-logging
     prefer-ip-address: true     #访问路径可以显示IP地址
 
 spring:
   application:
-    name: microservice-consumer-movie-feign-manual
+    name: microservice-consumer-movie-feign-logging
+
 
 info:
   app:
@@ -24,7 +25,13 @@ info:
       artifactId: @project.artifactId@
       version: @project.version@
 
+logging:
+  level:
+    #将fegin的日志设置为debug 因为fegin的Logger.Level只对Debug做出响应
+    com.csii.cloud.study.feign.UserFeignClient: DEBUG
+
+#
 # microservice-discovery-eureka
-# microservice-provider-user-with-auth
-# 测试  http://localhost:8508/user-user/22
-# http://localhost:8508/user-admin/22
+# microservice-provider-user
+# 测试  http://localhost:8508/user/22
+#
