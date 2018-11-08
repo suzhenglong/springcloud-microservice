@@ -1,0 +1,58 @@
+server:
+  port: 8501
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: microservice-provider-user-multiple-params #每个项目唯一
+    prefer-ip-address: true     #访问路径可以显示IP地址
+
+spring:
+  application:
+    name: microservice-provider-user-multiple-params
+  jpa:
+    generate-ddl: false                 #是否在启动时初始化schema，默认为false
+    show-sql: true                      #是否开启sql的log，默认为: false
+    hibernate:
+      ddl-auto: update                    # Default to "create-drop" create 启动时删数据库中的表，然后创建，退出时不删除数据表  create-drop 启动时删数据库中的表，然后创建，退出时删除数据表 如果表不存在报错  update 如果启动时表格式不一致则更新表，原有数据保留 validate 项目启动表结构进行校验 如果不一致则报错
+
+  datasource:                           # 指定数据源
+    platform: mysql                     # 指定数据源类型
+    schema: classpath:schema.sql        # 指定mysql数据库的建表脚本
+    data: classpath:data.sql            # 指定mysql数据库的数据脚本
+    url: jdbc:mysql://192.168.121.181:3309/manager
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    dbcp2:
+      min-idle: 5                                           # 数据库连接池的最小维持连接数
+      initial-size: 5                                       # 初始化连接数
+      max-total: 5                                          # 最大连接数
+      max-wait-millis: 200                                  # 等待连接获取的最大超时时间
+
+
+logging:                                # 配置日志级别，让hibernate打印出执行的SQL
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    
+## INFO
+info: 
+  app: 
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
+    build:
+      artifactId: @project.artifactId@
+      version: @project.version@
+management:
+  security:
+    enabled: false                 # 显示当前应用的健康状况 true:只显示概要情况 false:展示详情
+
+
