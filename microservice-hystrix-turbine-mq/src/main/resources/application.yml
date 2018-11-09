@@ -1,0 +1,27 @@
+server:
+  port: 8031
+spring:
+  rabbitmq:
+    host: 192.168.121.181
+    port: 5673
+    username: guest
+    password: guest
+  application:
+    name: microservice-hystrix-turbine-mq
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: microservice-hystrix-turbine-mq
+    prefer-ip-address: true     #访问路径可以显示IP地址
+
+
+#测试
+# microservice-discovery-eureka
+# microservice-provider-user
+# microservice-consumer-movie-ribbon-hystrix-turbine-mq
+# http://localhost:8508/user/22
+# microservice-hystrix-dashboard
+# http://localhost:8031/
+# http://localhost:9001/hystrix 指定 http://localhost:8031/turbine.stream

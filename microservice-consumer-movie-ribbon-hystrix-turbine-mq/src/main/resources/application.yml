@@ -1,0 +1,36 @@
+server:
+  port: 8508
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: microservice-consumer-movie-ribbon-hystrix-turbine-mq
+    prefer-ip-address: true     #访问路径可以显示IP地址
+
+spring:
+  rabbitmq:
+    host: 192.168.121.181
+    port: 5673
+    username: guest
+    password: guest
+  application:
+    name: microservice-consumer-movie-ribbon-hystrix-turbine-mq
+
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
+    build:
+      artifactId: @project.artifactId@
+      version: @project.version@
+
+#测试
+# microservice-discovery-eureka
+# microservice-provider-user
+# http://localhost:8504/user/11
+# http://localhost:8504/health
