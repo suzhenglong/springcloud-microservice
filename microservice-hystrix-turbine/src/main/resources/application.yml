@@ -1,0 +1,27 @@
+server:
+  port: 8031
+spring:
+  application:
+    name: microservice-hystrix-turbine
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    prefer-ip-address: true
+turbine:
+  appConfig: MICROSERVICE-CONSUMER-MOVIE-FEIGN-HYSTRIX-FALLBACK-STREAM,MICROSERVICE-CONSUMER-MOVIE-RIBBON-HYSTRIX
+  clusterNameExpression: "'default'"
+
+
+#测试
+# microservice-discovery-eureka
+# microservice-provider-user
+# microservice-consumer-movie-ribbon-hystrix
+# microservice-consumer-movie-feign-hystrix-fallback-stream
+# microservice-hystrix-dashboard
+# microservice-hystrix-turbine
+# http://localhost:8504/user/22  产生数据
+# http://localhost:8509/user/22
+# http://localhost:8504/hystrix.stream
+# http://localhost:9001/hystrix 指定 http://localhost:8031/turbine.stream

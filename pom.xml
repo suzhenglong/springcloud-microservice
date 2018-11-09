@@ -59,6 +59,9 @@
         <module>microservice-consumer-movie-ribbon-hystrix</module>
         <module>microservice-consumer-movie-feign-hystrix-fallback</module>
         <module>microservice-consumer-movie-feign-hystrix-fallback-factory</module>
+        <module>microservice-hystrix-dashboard</module>
+        <module>microservice-consumer-movie-feign-hystrix-fallback-stream</module>
+        <module>microservice-hystrix-turbine</module>
     </modules>
 
     <build>
