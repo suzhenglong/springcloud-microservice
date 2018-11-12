@@ -16,3 +16,13 @@ spring:
 
 # microservice-discovery-eureka
 # microservice-gateway-zuul
+# http://localhost:8050/upload
+# curl -F "file=@20008474.txt" http://localhost:8050/upload
+# curl -F "file=@microservice-provider-user.jar" http://localhost:8050/upload
+# https://blog.csdn.net/chengqiuming/article/details/80805667
+
+# 4.00 KB 小文件 47.7 MB  大文件
+#  http://localhost:8050/upload 大小文件都可以上传
+#  http://localhost:8040/microservice-file-upload/upload  小文件成功
+#  http://localhost:8040/zuul/microservice-file-upload/upload
+# 测试修改配置文件可见 microservice-gateway-zuul-file-upload
