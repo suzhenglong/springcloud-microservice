@@ -1,0 +1,29 @@
+server:
+  port: 8040
+spring:
+  application:
+    name: microservice-gateway-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: microservice-gateway-zuul
+    prefer-ip-address: true     #访问路径可以显示IP地址
+
+management:
+  security:
+    enabled: false
+
+#测试
+# microservice-discovery-eureka
+# microservice-provider-user
+# microservice-consumer-movie-ribbon
+# microservice-hystrix-dashboard
+# http://localhost:8504/user/22
+# http://localhost:8040/microservice-consumer-movie-ribbon/user/22
+# http://localhost:8040/microservice-provider-user/22
+# http://localhost:9001/hystrix   http://localhost:8040/hystrix.stream
+
+# http://localhost:8040/routes
+# http://localhost:8040/routes?format=details

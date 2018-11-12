@@ -25,3 +25,4 @@ turbine:
 # http://localhost:8509/user/22
 # http://localhost:8504/hystrix.stream
 # http://localhost:9001/hystrix 指定 http://localhost:8031/turbine.stream
+
