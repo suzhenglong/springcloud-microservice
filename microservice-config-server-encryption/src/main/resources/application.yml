@@ -25,3 +25,7 @@ spring:
 
 # curl $CONFIG_SERVER_URL/decrypt -d 想要解密的密文 64位
 # curl http://localhost:8081/decrypt -d ab9f93eb724a82b77635ea592d309b755de69a8a6f541b7bb54567fba8115a22
+
+# http://www.itmuch.com/spring-cloud/config-server-encrypt-decrypt/
+
+# http://localhost:8081/encryption-default.yml
