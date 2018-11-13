@@ -1,4 +1,4 @@
-package com.itmuch.cloud.study.controller;
+package com.csii.cloud.study.controller;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,11 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
- /**
-  * @Description:
-  * @author: zhenglongsu@163.com
-  * @date: 2018.11.12 17:00
-  */
+
 @Controller
 public class FileUploadController {
   /**
