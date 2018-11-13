@@ -1,0 +1,23 @@
+server:
+  port: 8040
+spring:
+  application:
+    name: microservice-gateway-zuul-filter
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: microservice-gateway-zuul-filter
+    prefer-ip-address: true     #访问路径可以显示IP地址
+
+
+management:
+  security:
+    enabled: false
+
+#测试
+# microservice-discovery-eureka
+# microservice-provider-user
+# http://localhost:8040/microservice-provider-user/22
+# http://localhost:8040/filters

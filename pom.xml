@@ -67,6 +67,7 @@
         <module>microservice-gateway-zuul</module>
         <module>microservice-file-upload</module>
         <module>microservice-gateway-zuul-file-upload</module>
+        <module>microservice-gateway-zuul-filter</module>
     </modules>
 
     <build>
