@@ -1,0 +1,6 @@
+server:
+  port: 8082
+
+
+# microservice-config-server
+# 测试 http://localhost:8082/profile

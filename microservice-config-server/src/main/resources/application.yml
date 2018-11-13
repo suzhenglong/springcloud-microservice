@@ -1,5 +1,5 @@
 server:
-  port: 8088
+  port: 8081
 spring:
   application:
     name: microservice-config-server
@@ -7,17 +7,12 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/suzhenglong/spring-cloud-config-repo.git      # 配置Git仓库的地址
+          uri: https://github.com/suzhenglong/spring-cloud-config-repo      # 配置Git仓库的地址
           username: zhenglongsu@163.com                                         # Git仓库的账号
           password: NieLong504473410                                            # Git仓库的密码
 
 
-logging:
-  level:
-    org.springframework.cloud: DEBUG
-    org.springframework.boot: DEBUG
-
 # 测试：
 # 1.观察启动日志
-# 2.访问 http://localhost:8088/microservice-foo/dev
-# 3 http://localhost:8088/foo-config-2.0/microservice-foo-dev.yml
+# 2.访问 http://localhost:8081/microservice-foo/dev
+# 3 http://localhost:8081/foo-config-2.0/microservice-foo-dev.yml
