@@ -10,6 +10,8 @@ eureka:
   instance:
     prefer-ip-address: true
 
+
+
   #测试
   # microservice-discovery-eureka
   # microservice-provider-user
