@@ -16,3 +16,4 @@ eureka:
   # microservice-sidecar-node-service
   # JVM微服务访问非JVM微服务
   # http://localhost:8071/test
+  # http://localhost:7001/eureka/apps/microservice-sidecar-node-service

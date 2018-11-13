@@ -1,0 +1,18 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: microservice-gateway-zuul-aggregation
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    prefer-ip-address: true
+
+  #测试
+  # microservice-discovery-eureka
+  # microservice-provider-user
+  # microservice-consumer-movie-ribbon
+  # http://localhost:8090/aggregate/22
+  # 停止  microservice-provider-user  microservice-consumer-movie-ribbon
