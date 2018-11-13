@@ -21,6 +21,7 @@ management:
 # microservice-provider-user
 # microservice-consumer-movie-ribbon
 # microservice-hystrix-dashboard
+# http://localhost:8501/22
 # http://localhost:8504/user/22
 # http://localhost:8040/microservice-consumer-movie-ribbon/user/22
 # http://localhost:8040/microservice-provider-user/22
