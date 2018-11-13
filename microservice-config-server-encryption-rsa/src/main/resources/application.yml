@@ -1,0 +1,25 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: microservice-config-server-encryption-rsa
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/suzhenglong/spring-cloud-config-repo      # 配置Git仓库的地址
+          username: zhenglongsu@163.com                                         # Git仓库的账号
+          password: NieLong504473410                                            # Git仓库的密码
+
+
+# 测试：
+# 创建一个Key Store，并将生成的文件复制到项目的classpath下。
+# cmd
+# cd D:\Program Files\Java\jdk1.8.0_131\bin>
+# keytool -genkeypair -alias mytestkey -keyalg RSA -dname "CN=Web Server,OU=Unit,O=Organization,L=City,S=State,C=US" -keypass changeme -keystore server.jks -storepass letmein
+# 或者linux 执行
+#将生成的server.jks 拷贝到 项目的classpath下
+
+# http://localhost:8081/encrypt/status
+# curl http://localhost:8081/encrypt -d mysecret
+# curl http://localhost:8081/decrypt -d AQAj5ENeGjIstQ/fERzoJw0qsm4AdqDGmNp8F6twksCjmy1wRRfkQjPSvrzAV/4e/+gisPtv1/8ivyiUNi43AaoNwdjuLZUMQOQUAdbktGDKxhtKqQHid4djfJ4D3fBi+O/Y3GZ9VDeK7yQFxJVXU7qXQKo1bN7r0LrRGdXL/AiCdm4xk2lkz4J0X+fjHOXk4mZQAbI1gVg1wLp1HCpd83IJlduH+NnBiBrj2pVyAz7FZh+JP78XyRaNQmt5/3wb52iTHmQh1ECDw2iEErEPo6rq5Y5GwQkPwgSPOLb57qczoZX7xgc8bn3ZRnD8bugIA/DWMsrPdJNhzUhD8uoEQWoywayN9sonleY1ItG7TxL2yB4MNVNkjvZArrqlHwtGtKc=
