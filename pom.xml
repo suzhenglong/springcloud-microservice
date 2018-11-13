@@ -74,6 +74,7 @@
         <module>microservice-gateway-zuul-aggregation</module>
         <module>microservice-config-server</module>
         <module>microservice-config-client</module>
+        <module>microservice-config-server-health</module>
     </modules>
 
     <build>
