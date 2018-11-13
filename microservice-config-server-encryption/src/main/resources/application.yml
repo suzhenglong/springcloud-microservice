@@ -1,0 +1,27 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: microservice-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/suzhenglong/spring-cloud-config-repo      # 配置Git仓库的地址
+          username: zhenglongsu@163.com                                         # Git仓库的账号
+          password: NieLong504473410                                            # Git仓库的密码
+
+  #安装JCE
+  #Config Server的加解密功能依赖Java Cryptography Extension（JCE）。
+  #
+  #Java 8 JCE的地址是：http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html 。
+  #
+  #下载JCE，解压后，按照README.txt的说明即可安装，其实就是将JDK/jre/lib/security目录中的两个jar文件替换为JCE中的jar文件。
+
+# 测试
+# curl $CONFIG_SERVER_URL/encrypt -d 想要加密的明文
+
+# curl http://localhost:8081/encrypt -d mysecret
+
+# curl $CONFIG_SERVER_URL/decrypt -d 想要解密的密文 64位
+# curl http://localhost:8081/decrypt -d ab9f93eb724a82b77635ea592d309b755de69a8a6f541b7bb54567fba8115a22

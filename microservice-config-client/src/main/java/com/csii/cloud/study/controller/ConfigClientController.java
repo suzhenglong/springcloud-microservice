@@ -1,4 +1,4 @@
-package com.itmuch.cloud.study.controller;
+package com.csii.cloud.study.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;

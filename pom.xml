@@ -75,6 +75,7 @@
         <module>microservice-config-server</module>
         <module>microservice-config-client</module>
         <module>microservice-config-server-health</module>
+        <module>microservice-config-server-encryption</module>
     </modules>
 
     <build>
