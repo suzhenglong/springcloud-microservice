@@ -1,0 +1,22 @@
+server:
+  port: 8082
+
+management:
+  security:
+    enabled: false
+
+
+  #1 启动microservice-config-server
+  #2 启动microservice-config-client-refresh
+  #3 访问 http://localhost:8082/profile ,获得结果
+  #dev-1.0
+  #4 修改Git仓库中microservice-foo-dev.properties的文件内容为：
+  #profile=dev-1.0-change
+  #5 重新访问http://localhost:8082/profile,获得结果依然是：
+  #dev-1.0
+  #6 发送post请求到 http://localhost:8082/refresh,结果返回
+  # curl -X POST http://localhost:8082/refresh
+  # 或者postman
+  #7 再次访问http://localhost:8082/profile，返回结果为：
+  #dev-1.0-change
+  #说明配置已经刷新
