@@ -1,0 +1,26 @@
+server:
+  port: 8501
+
+spring:
+  application:
+    name: microservice-simple-consumer-movie-sleuth
+
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
+    build:
+      artifactId: @project.artifactId@
+      version: @project.version@
+
+logging:
+  level:
+    org.springframework.cloud.sleuth: DEBUG
+
+#测试
+#启动  microservice-simple-provider-user
+# http://localhost:8501/user/11
+
