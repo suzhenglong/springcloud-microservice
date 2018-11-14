@@ -38,3 +38,4 @@ management:
   #7 再次访问http://localhost:8084/profile，返回结果为：
   #dev-1.0-change
   #说明配置已经刷新
+  # http://localhost:8084/trace  跟踪总线事件
