@@ -4,8 +4,14 @@ server:
 spring:
   application:
     name: microservice-simple-consumer-movie-sleuth-zipkin-stream
+  rabbitmq:
+    host: 192.168.121.181
+    port: 5673
+    username: guest
+    password: guest
   zipkin:
-    base-url: http://localhost:9411
+    rabbitmq:
+      queue: zipkin
   sleuth:
     sampler:
       percentage: 1.0
