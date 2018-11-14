@@ -82,6 +82,8 @@
         <module>microservice-config-server-refresh-cloud-bus</module>
         <module>microservice-config-server-eureka</module>
         <module>microservice-config-client-eureka</module>
+        <module>microservice-config-server-eureka-authenticating</module>
+        <module>microservice-config-client-eureka-authenticating</module>
     </modules>
 
     <build>

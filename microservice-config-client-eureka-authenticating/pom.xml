@@ -9,7 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>microservice-config-client-eureka</artifactId>
+    <artifactId>microservice-config-client-eureka-authenticating</artifactId>
+
 
     <dependencies>
         <dependency>
