@@ -1,0 +1,40 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: microservice-config-server-health
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/suzhenglong/spring-cloud-config-repo      # 配置Git仓库的地址
+          username: zhenglongsu@163.com                                         # Git仓库的账号
+          password: NieLong504473410                                            # Git仓库的密码
+    bus:
+      trace:
+        enabled: true     # 开启cloud bus的跟踪
+  rabbitmq:
+    host: 192.168.121.181
+    port: 5673
+    username: guest
+    password: guest
+management:
+  security:
+    enabled: false
+
+# curl -X POST http://localhost:8081/bus/refresh
+
+  #1 启动 microservice-config-server-refresh-cloud-bus
+  #2 启动 microservice-config-client-refresh-cloud-bus
+  #2 启动 microservice-config-client-refresh-cloud-bus 8084
+  #3 访问 http://localhost:8082/profile ,获得结果
+  #dev-1.0
+  #4 修改Git仓库中microservice-foo-dev.properties的文件内容为：
+  # profile: dev-1.0-bus-server
+  #6 发送post请求到 http://localhost:8082/bus/refresh,结果返回
+  # curl -X POST http://localhost:8081/bus/refresh
+  # 或者postman
+  #7 再次访问http://localhost:8082/profile，返回结果为：
+  #7 再次访问http://localhost:8084/profile，返回结果为：
+  #dev-1.0-change
+  #说明配置已经刷新
