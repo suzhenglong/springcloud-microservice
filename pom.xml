@@ -89,6 +89,9 @@
         <module>microservice-simple-provider-user-sleuth</module>
         <module>microservice-simple-consumer-movie-sleuth</module>
         <module>microservice-simple-provider-user-sleuth-elk</module>
+        <module>microservice-trace-zipkin-server</module>
+        <module>microservice-simple-provider-user-sleuth-zipkin</module>
+        <module>microservice-simple-consumer-movie-sleuth-zipkin</module>
     </modules>
 
     <build>
