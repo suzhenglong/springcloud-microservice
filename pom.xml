@@ -97,6 +97,7 @@
         <module>microservice-trace-zipkin-server-stream</module>
         <module>microservice-simple-provider-user-sleuth-zipkin-stream</module>
         <module>microservice-simple-consumer-movie-sleuth-zipkin-stream</module>
+        <module>microservice-trace-zipkin-server-stream-elasticsearch</module>
     </modules>
 
     <build>
