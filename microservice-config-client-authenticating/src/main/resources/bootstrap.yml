@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: microservice-foo    # 对应config server所获取的配置文件的{application}
+  cloud:
+    config:
+      username: user
+      password: 123456
+      profile: dev
+      label: master
+      uri: http://localhost:8081/
+
+
