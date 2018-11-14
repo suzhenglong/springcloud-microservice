@@ -1,0 +1,9 @@
+server:
+  port: 9411
+zipkin:
+  collector:
+    rabbitmq:
+      addresses: 192.168.121.181:5673
+      password: guest
+      username: guest
+      queue: zipkin
