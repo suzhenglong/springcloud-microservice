@@ -16,7 +16,7 @@ spring:
 logging:
   level:
     #将fegin的日志设置为debug 因为fegin的Logger.Level只对Debug做出响应
-    com.csii.cloud.study.feign.UserFeignClient: DEBUG
+    com.suzl.cloud.study.feign.UserFeignClient: DEBUG
 feign:
   client:
     config:
